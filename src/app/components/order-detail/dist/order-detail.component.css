@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic 5 groceryee app
+  Created : 10-Sep-2020
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+*/
+.main_content_div {
+  width: 100%;
+  padding: 16px;
+}
+.main_content_div .card_div {
+  padding: 20px;
+}
+.main_content_div .card_div .resto_detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.main_content_div .card_div .resto_detail .back_image {
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
+.main_content_div .card_div .resto_detail .res_name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.main_content_div .card_div .resto_detail .res_location {
+  color: gray;
+  font-size: 14px;
+}
+.main_content_div .card_div .resto_detail .order_id {
+  position: absolute;
+  right: 5px;
+}
+.main_content_div .card_div .resto_detail .order_id ion-label {
+  text-align: right;
+}
+.main_content_div .card_div2 {
+  padding: 10px 20px;
+}
+.main_content_div .card_div2 .personal_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_content_div .card_div2 .personal_detail ion-icon {
+  font-size: 20px;
+  color: #45C261;
+}
+.main_content_div .card_div2 .personal_detail ion-button {
+  --border-radius: 3px;
+  font-weight: 600;
+}
+.main_content_div .card_div2 .personal_detail .res_name {
+  font-weight: 600;
+  font-size: 14px;
+}
+.main_content_div .card_div2 .order_detail .head_gray {
+  color: gray;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.main_content_div .card_div2 .order_detail .small_lbl {
+  font-size: 14px;
+  font-weight: 600;
+}
+.main_content_div .card_div2 .order_detail .prize {
+  position: absolute;
+  right: 35px;
+  font-weight: 600 !important;
+  color: black;
+}
+.main_content_div .card_div2 .order_detail .prize1 {
+  position: absolute;
+  right: 35px;
+  font-weight: 600 !important;
+  color: black;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.main_content_div .card_div2 .order_detail .small_lbl2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.main_content_div .titles {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px 0px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+.main_content_div ion-label {
+  display: block;
+}
+.main_content_div .desc_div {
+  width: 100%;
+}
+.main_content_div .desc_div .border_bottom {
+  padding-bottom: 10px;
+  width: 100%;
+}
+.main_content_div .desc_div .border_bottom .storeName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+.main_content_div .desc_div .border_bottom .storeName .name {
+  font-weight: bold;
+}
+.main_content_div .desc_div .border_bottom .storeName .status {
+  font-weight: bold;
+}
+.main_content_div .desc_div .border_bottom .items {
+  margin: 0px;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 0.5px dashed lightgray;
+  margin-bottom: 10px;
+}
+.main_content_div .desc_div .border_bottom .itemss {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.main_content_div .flex_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.main_content_div .flex_div .values {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.main_content_div .hr_line_div {
+  margin-top: 15px;
+  width: 100%;
+  height: 1px;
+  background: lightgray;
+}
+.main_content_div .tracking_div {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.main_content_div .tracking_div .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.main_content_div .tracking_div .left .line_div {
+  height: 40px;
+  width: 1px;
+  border: 1px solid #E8E8E8;
+}
+.main_content_div .tracking_div .left .line_div_darkgray {
+  height: 40px;
+  width: 1px;
+  border: 1px solid #C8C7CE;
+}
+.main_content_div .tracking_div .left .round_div_gray {
+  height: 20px;
+  width: 20px;
+  background-color: #E8E8E8;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.main_content_div .tracking_div .left .round_div_darkgray {
+  height: 20px;
+  width: 20px;
+  background-color: #C8C7CE;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.main_content_div .tracking_div .left .round_div_red {
+  height: 20px;
+  width: 20px;
+  background-color: #45C261;
+  border-radius: 50%;
+  margin-left: -9px;
+}
+.main_content_div .tracking_div .left ion-icon {
+  font-size: 20px;
+  margin-left: -7px;
+  color: #45C261;
+  background: #f4f5f8;
+  border-radius: 50%;
+}
+.main_content_div .tracking_div .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+.main_content_div .tracking_div .right .line_div {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.main_content_div .tracking_div .right .round_div_gray {
+  height: 20px;
+  width: 100% px;
+  color: #C8C7CE;
+}
+.main_content_div .tracking_div .right .round_div_red {
+  height: 20px;
+  width: 100% px;
+  color: var(--ion-color-main);
+}
+.main_content_div .tracking_div .right .round_div_darkgray {
+  height: 20px;
+  width: 100%;
+  color: gray;
+}
+
+.btn_div {
+  display: flex;
+  justify-content: center;
+}
+.btn_div ion-button {
+  font-weight: 600;
+  --border-radius: 5px;
+  width: 130px;
+}
+.btn_div .reject {
+  --background:var(--ion-color-danger);
+}
+.btn_div .accept {
+  --background: #45C261;
+}
+
+.status_div {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+.status_div ion-select {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  --padding-top: 3px;
+  --padding-bottom:3px;
+  width: 100%;
+}
+.status_div ion-button {
+  font-weight: 600;
+  --border-radius: 5px;
+}
+
+.green {
+  display: block;
+  text-align: center;
+  color: green;
+  font-weight: 600;
+}
+
+.red {
+  display: block;
+  text-align: center;
+  color: #45C261;
+  font-weight: 600;
+}

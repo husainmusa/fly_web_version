@@ -1,0 +1,171 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic 5 groceryee app
+  Created : 10-Sep-2020
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2020-present initappz.
+*/
+@import 'node_modules/angular2-toaster/toaster';
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+@font-face {
+    // font-family: muli-regular;
+    font-family: 'Heebo', sans-serif !important;
+    // src: url(assets/fonts/Muli/Muli-Regular.ttf);
+    src: url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+}
+@font-face {
+    // font-family: muli-bold;
+    font-family: 'Heebo', sans-serif !important;
+    // src: url(assets/fonts/Muli/Muli-Bold.ttf);
+    src: url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+}
+
+*{
+    // font-family: muli-regular;
+    font-family: 'Heebo', sans-serif ;
+}
+/* You can add global styles to this file, and also import other style files */
+.navbar{
+  background-color: #45C261 !important;
+}
+body{
+  text-align: unset !important;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.carousel-control-prev-icon{
+    background: black;
+}
+.carousel-control-next-icon{
+  background: black;
+}
+#toast-container > div{
+  background: red !important;
+}
+.footer-bottom{
+  position: fixed;
+  bottom: 0px;
+  background: white;
+  width: 100%;
+  z-index: 999;
+  border: 0.5px solid lightgray;
+  .tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px 0px;
+    .social{
+      position: relative;
+      .cartTotal{
+        position: absolute;
+        top: -10px;
+        height: 15px;
+        width: 15px;
+        background: #f27474;
+        border-radius: 50%;
+        line-height: 15px;
+        color: white;
+        font-size: 10px;
+      }
+    }
+    a{
+      text-align: center;
+      color:#45C261;
+    }
+    .normalFont{
+      font-size: 10px;
+      font-weight: normal;
+    }
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+.custom-map-control-button{
+  background: none white;
+  border: 0px;
+  margin: 10px;
+  padding: 0px;
+  text-transform: none;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 40px;
+  box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+  overflow: hidden;
+  z-index: 0 !important;
+  position: absolute !important;
+  left: 0px !important;
+  bottom: 20px !important;
+}
+
+
+.custom-map-control-button-dib{
+  height: 30px;
+  background-size: cover;
+  margin: 5px;
+  
+}
+
+
+
+
+
+
+.cgmap_block {
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 130px;
+  overflow: hidden;
+}
+
+.cgmap_block .custom-map-control-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999999999 !important;
+}
+
+.cgmap_block .map {
+  width: 100%;
+}
+
+.main_cat{
+  width: 100%;
+}
+
+
+.categories {
+  width: 100%;
+}
+
+.addons_title_default {
+  width: 68% !important;
+  text-align: right !important;
+  padding: 0 5px !important;
+  color: gray !important;
+  margin-bottom: 5px !important;
+}
+
+.addons_title_custome{
+  width: 35%;
+  text-align: left;
+  padding: 0 5px;
+  font-size: 12px;
+}
+.subaddon_btn {
+  width: 100px;
+}
+.subadd_price {
+  width: 31px;
+}
