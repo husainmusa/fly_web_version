@@ -394,8 +394,8 @@ export class ProductDetailComponent implements  OnDestroy {
   // }
   getRelated() {
     const param = {
-      id: this.subId,
-      limit: 5,
+      id: this.productt.cate_id,
+      limit: 1000,
       cid: localStorage.getItem('city')
     };
     this.related = [];
@@ -405,7 +405,7 @@ export class ProductDetailComponent implements  OnDestroy {
       this.dummyTopProducts = [];
       if (data && data.status === 200 && data.data && data.data.length) {
         const products = data.data;
-        this.related = products.filter(x => x.id !== this.id);
+        this.related = products.filter(x => x.id !== this.id && x.store_id == this.productt.store_id );
       }
     }, error => {
       console.log(error);

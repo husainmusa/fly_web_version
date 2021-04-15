@@ -58,7 +58,7 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       if (data && data.id) {
         this.id = data.id;
-        this.limit = 1;
+        this.limit = 1000;
         this.loaded = false;
         this.haveSortFilter = false;
         this.name = data.name;

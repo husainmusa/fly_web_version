@@ -159,11 +159,11 @@
             </div>
           </div>
         </div>
-        <div *ngIf="maxLimit < products.length && loaded === false" (click)="loadData()" class="centerItem">
+        <!-- <div *ngIf="maxLimit < products.length && loaded === false" (click)="loadData()" class="centerItem">
           <span class="loadMore">
             {{util.getString('Show more')}}
           </span>
-        </div>
+        </div> -->
         <div *ngIf="loaded" class="centerItem">
           <div class="spinner-border text-success" role="status">
             <span class="sr-only">Loading...</span>

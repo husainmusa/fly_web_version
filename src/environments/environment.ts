@@ -45,7 +45,8 @@ export const environment = {
   onesignal: {
     appId: '0a0822e8-efcc-40d6-bd4c-d69a8a68ee59',
     googleProjectNumber: '364812891343',
-    restKey: 'ZjE5MzdlNDEtMTA4ZS00MzI1LWI1Y2QtNjI4ZmY5MGM4NGUz'
+    // restKey: 'ZjE5MzdlNDEtMTA4ZS00MzI1LWI1Y2QtNjI4ZmY5MGM4NGUz'
+    restKey:'ZTJiMGRjNmYtNWIzZi00OWQxLTkwZDYtMTk5MDcxNGEyYTJj'
   },
 
   

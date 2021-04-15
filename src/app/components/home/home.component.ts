@@ -508,7 +508,8 @@ export class HomeComponent implements OnInit {
       const cates = [];
       if (datas && datas.data && datas.data.length) {
         datas.data.forEach(element => {
-          if (element.status === '1') {
+          console.log('element',element)
+          if (element.status === '1' && element.showInApp == '1') {
             const info = {
               id: element.id,
               name: element.name,

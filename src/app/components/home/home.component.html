@@ -59,7 +59,8 @@
     </a>
     <div class="sliders" #content>
       <a class="categoryIcon" *ngFor="let item of categories" (click)="openStore(item,'category')">
-        <div class="imgs">
+      <div>
+        <div class="imgs" >
           <img [src]="api.mediaURL + item.cover" class="icon">
         </div>
         <p class="name" *ngIf="util.deviceType !=='mobile'"> {{item.name}} </p>
@@ -67,6 +68,7 @@
           {{item.name}}
           <!-- {{ (item.name.length>8)? (item.name | slice:0:8)+'..':(item.name) }} -->
         </p>
+      </div>
       </a>
       <div *ngFor="let item of  dummyCates; ">
         <ngx-skeleton-loader appearance="circle" [theme]="{ 'border-radius': '5px', height: '80px',width:'80px'}">

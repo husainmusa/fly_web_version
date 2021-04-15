@@ -40,7 +40,7 @@ export class StoresProductComponent implements OnInit {
     private route: ActivatedRoute,
     private navCtrl: Location
   ) {
-    this.getCategorys();
+   
     this.route.queryParams.subscribe((data: any) => {
       console.log("categorytype",data);
       console.log("categorytype", data.type);
@@ -49,7 +49,9 @@ export class StoresProductComponent implements OnInit {
         this.limit = 1;
         this.loaded = false;
         this.name = data.name;
+
         this.dummyTopProducts = Array(30);
+        this.getCategorys();
         if(data.type == "category"){
           this.PageType = 'category'
           console.log("inside category");
@@ -68,14 +70,14 @@ export class StoresProductComponent implements OnInit {
   getOffers() {
     const param = {
       id: this.id,
-      limit: this.limit * 12
+      limit: this.limit * 1000
     };
     this.api.post('products/getProductByStores', param).subscribe((data: any) => {
       console.log('getProductByStores', data);
       const products = data.data;
 
 
-      this.maxLimit = (this.limit * 12) - 1;
+      this.maxLimit = (this.limit * 1000) - 1;
       this.dummyTopProducts = [];
       if (data && data.status === 200 && data.data && data.data.length) {
 
@@ -177,13 +179,13 @@ export class StoresProductComponent implements OnInit {
   getProducts() {
     const param = {
       id: this.id,
-      limit: this.limit * 12,
+      limit: this.limit * 1000,
       cid: localStorage.getItem('city')
     };
     this.api.post('products/getByCid', param).subscribe((data: any) => {
       console.log('getByCid', data);
       const products = data.data;
-      this.maxLimit = (this.limit * 12) - 1;
+      this.maxLimit = (this.limit * 1000) - 1;
       this.dummyTopProducts = [];
       if (data && data.status === 200 && data.data && data.data.length) {
         this.categories.forEach(element => {
@@ -399,14 +401,34 @@ export class StoresProductComponent implements OnInit {
 
     /***  get categories here and map in product  **/
 
+    // getCategorys(){
+    //   this.api.get('categories').subscribe((res: any) => {
+    //     if(res && res.data && res.data.length){
+    //        this.categories =  res.data;
+    //        console.log('categories=========>',  this.categories)
+  
+    //     }
+  
+    //   })
+    // }
     getCategorys(){
-      this.api.get('categories').subscribe((res: any) => {
-        if(res && res.data && res.data.length){
-           this.categories =  res.data;
-           console.log('categories=========>',  this.categories)
-  
-        }
-  
-      })
-    }
+
+      const param = {
+        id: this.id
+      }
+      this.api.post('categories/getByStoreId',param).subscribe((data: any) => {
+          if (data && data.status === 200 &&  data.data.catIndex  && data.data.catIndex != '' ) {
+            if (((x) => { try { JSON.parse(x); return true; } catch (e) { return false } })(data.data.catIndex )) {
+                  this.categories =  JSON.parse(data.data['catIndex']);
+                  console.log('this.categoriessdsd',this.categories )
+                  this.categories.sort(function (a, b) {
+                    return a.index - b.index;
+                  });
+                }
+            }else if(data && data.status === 300) {
+              this.categories = data.data;
+      
+            }
+        })
+      }
 }
